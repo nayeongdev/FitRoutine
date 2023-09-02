@@ -33,11 +33,11 @@ function App() {
     console.log("실행중");
     const goal = $('#user-goal');
     const age = $('#user-age');
-    const gender = $('#user-gender');
+    const gender = $('input[name ="user-gender"]:checked');
     const height = $('#user-height');
     const weight = $('#user-weight');
     const place = $('#user-place');
-    const preferredActivity = $('#user-preferred-activity');
+    const preferredActivity = $('input[name ="user-preferred-activity"]:checked');
     const focusOnPart = $('#focus-on-body-part');
     const level = $('#user-level');
     const exerciseTime = $('#user-exercise-time');
@@ -78,7 +78,7 @@ function App() {
     e.preventDefault();
     console.log("실행중");
     const participantsNum = $('#participants-num');
-    const gender = $('#group-gender');
+    const gender = $('input[name ="group-gender"]:checked');
     const goal = $('#group-goal');
     const level = $('#group-level');
     const place = $('#group-place');
