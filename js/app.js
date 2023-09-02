@@ -38,7 +38,7 @@ function App() {
     const weight = $('#user-weight');
     const place = $('#user-place');
     const preferredActivity = $('#user-preferred-activity');
-    const focusOnPart = $('#focus-on-part');
+    const focusOnPart = $('#focus-on-body-part');
     const level = $('#user-level');
     const exerciseTime = $('#user-exercise-time');
 

@@ -29,7 +29,7 @@
         <li>
           <a href="">
             <img src="resources/img/sprint.svg" alt="운동 아이콘">
-            <span>맞춤운동 생성하기</span>
+            <span>운동 루틴 생성하기</span>
           </a>
           <ul class="sub-list">
             <li><a href="">개인맞춤 운동</a></li>
@@ -59,7 +59,7 @@
       </div>
       <button>
         <img src="resources/img/sprint.svg" alt="운동 아이콘">
-        <span>맞춤 운동 생성하기</span>
+        <span>운동 루틴 생성하기</span>
       </button>
       <button>
         <img src="resources/img/chat_bubble.svg" alt="채팅 아이콘">
@@ -83,46 +83,76 @@
       <form class="info-form">
         <div>
           <label for="user-goal">목표</label>
-          <input type="text" id="user-goal">
+          <select name="user-goal" id="user-goal">
+            <option value="체중 감량">살을 빼고 싶어요</option>
+            <option value="근육 강화">근육을 강화하고 싶어요</option>
+            <option value="건강 개선">건강을 개선하고 싶어요</option>
+            <option value="스트레스 해소">스트레스 해소가 필요해요</option>
+          </select>
         </div>
         <div>
-          <label for="user-gender">성별</label>
-          <input type="text" id="user-gender">
+          <span>성별</span>
+          <label for="male-user">남자</label>
+          <input type="radio" name="user-gender" id="male-user" value="남자">
+
+          <label for="female-user">여자</label>
+          <input type="radio" name="user-gender" id="female-user" value="여자">
+
+          <label for="none-user">설정 안함</label>
+          <input type="radio" name="user-gender" id="none-user" value="">
         </div>
         <div>
           <label for="user-age">나이</label>
-          <input type="text" id="user-age">
+          <input type="number" id="user-age" min="3" max="120">
         </div>
         <div>
           <label for="user-height">키</label>
-          <input type="text" id="user-height">
+          <input type="number" id="user-height" min="80" max="300">
         </div>
         <div>
           <label for="user-weight">몸무게</label>
-          <input type="text" id="user-weight">
+          <input type="number" id="user-weight" min="10" max="200">
         </div>
         <button>이전으로</button>
         <button>개인정보 등록하기</button>
 
         <div>
           <label for="user-level">레벨</label>
-          <input type="text" id="user-level">
+          <select name="user-level" id="user-level">
+            <option value="초보">(초보) 운동을 별로 해본적이 없어요</option>
+            <option value="중급">(중급) 기본적인 운동 경험이 있어요</option>
+            <option value="고급">(고급) 전문적으로 운동한 경험이 있어요</option>
+          </select>
         </div>
         <div>
           <label for="user-place">장소</label>
-          <input type="text" id="user-place">
+          <select name="user-place" id="user-place">
+            <option value="집">집</option>
+            <option value="공원">공원</option>
+            <option value="">핼스장</option>
+          </select>
         </div>
         <div>
-          <label for="user-preferred-activity">선호 운동</label>
-          <input type="text" id="user-preferred-activity">
+          <span>선호 운동</span>
+          <label for="muscular">근력</label>
+          <input type="radio" name="user-preferred-activity" id="muscular">
+          <label for="cardio">유산소</label>
+          <input type="radio" name="user-preferred-activity" id="cardio">
+          <label for="all">모두</label>
+          <input type="radio" name="user-preferred-activity" id="all">
         </div>
         <div>
-          <label for="focus-on-part">운동 부위</label>
-          <input type="text" id="focus-on-part">
+          <label for="focus-on-body-part">운동 부위</label>
+          <select name="focus-on-body-part" id="focus-on-body-part">
+            <option value="모두">모두</option>
+            <option value="상체">상체</option>
+            <option value="하체">하체</option>
+            <option value="코어">코어</option>
+          </select>
         </div>
         <div>
-          <label for="user-exercise-time">운동 시간</label>
-          <input type="text" id="user-exercise-time">
+          <label for="user-exercise-time">운동 시간(분)</label>
+          <input type="number" id="user-exercise-time" min="0" step="10">
         </div>
         <button>이전으로</button>
         <button type="submit" id="peronal-info-submit-btn">개인 운동루틴 생성하기</button>
@@ -135,31 +165,66 @@
       <form class="info-form">
         <div>
           <label for="participants-num">참가자 수</label>
-          <input type="text" id="participants-num">
+          <input type="number" id="participants-num" min="1">
         </div>
         <div>
-          <label for="group-gender">성별</label>
-          <input type="text" id="group-gender">
+          <span>성별</span>
+          <label for="male-group">남자</label>
+          <input type="radio" name="group-gender" id="male-group" value="남자">
+
+          <label for="female-group">여자</label>
+          <input type="radio" name="group-gender" id="female-group" value="여자">
+
+          <label for="mix-group">혼성</label>
+          <input type="radio" name="group-gender" id="mix-group" value="남녀 혼합">
         </div>
         <div>
           <label for="group-goal">목표</label>
-          <input type="text" id="group-goal">
+          <select name="group-goal" id="group-goal">
+            <option value="체중 감량">살을 빼고 싶어요</option>
+            <option value="근육 강화">근육을 강화하고 싶어요</option>
+            <option value="건강 개선">건강을 개선하고 싶어요</option>
+            <option value="스트레스 해소">스트레스 해소가 필요해요</option>
+          </select>
         </div>
         <div>
           <label for="group-level">레벨</label>
-          <input type="text" id="group-level">
+          <select name="group-level" id="group-level">
+            <option value="초보">(초보) 운동을 별로 해본적이 없어요</option>
+            <option value="중급">(중급) 기본적인 운동 경험이 있어요</option>
+            <option value="고급">(고급) 전문적으로 운동한 경험이 있어요</option>
+          </select>
         </div>
         <div>
           <label for="group-place">장소</label>
-          <input type="text" id="group-place">
+          <input list="group-places" id="group-place" name="group-place">
+
+          <datalist id="group-places">
+            <option value="체육관">체육관</option>
+            <option value="공원">공원</option>
+            <option value="산">산</option>
+          </datalist>
         </div>
         <div>
           <label for="group-preferred-activity">선호 운동</label>
-          <input type="text" id="group-preferred-activity">
+          <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity">
+
+          <datalist id="group-preferred-activities">
+            <option value="유산소 운동">유산소 운동</option>
+            <option value="달리기">달리기</option>
+            <option value="자전거">자전거</option>
+            <option value="댄스">댄스</option>
+          </datalist>
         </div>
         <div>
-          <label for="group-exercise-time">운동 시간</label>
-          <input type="text" id="group-exercise-time">
+          <div>
+            <label for="group-exercise-time">운동 시간(분)</label>
+            <div class="help-box">
+              <img class="img" src="resources/img/help.svg" alt="help logo">
+              <div class="help-msg">얼마나 운동하실건가요?</div>
+            </div>
+          </div>
+          <input type="number" id="group-exercise-time" min="0" step="10">
         </div>
         <button>이전으로</button>
         <button type="submit" id="group-info-submit-btn">그룹 운동루틴 생성하기</button>
