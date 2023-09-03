@@ -516,4 +516,28 @@ body {
 }
 #main-header .container .menu-close-btn.opened {
   display: block;
+}
+
+#main-footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main-footer .container .page-desc {
+  color: #BFC9C4;
+}
+#main-footer .container .developer-desc {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+#main-footer .container .developer-desc svg {
+  width: 2rem;
+  height: 2rem;
+}
+#main-footer .container .developer-desc path {
+  fill: #BFC9C4;
 }/*# sourceMappingURL=style.css.map */
