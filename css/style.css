@@ -430,7 +430,6 @@ body {
   height: 3rem;
   background-color: transparent;
   border: none;
-  background: url("resources/img/menu.svg");
 }
 #main-header .container .menu-open-btn svg {
   width: 100%;
