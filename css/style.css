@@ -354,6 +354,11 @@ h1 {
   font-family: "Kanit", sans-serif;
 }
 
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 body.non-scroll {
   overflow: hidden;
 }
@@ -527,9 +532,11 @@ body {
   /* IE */
 }
 #main-container .container {
+  max-width: 482px;
   display: flex;
   flex-direction: column;
-  max-width: 482px;
+  justify-content: center;
+  gap: 2rem;
 }
 #main-container .col-container {
   display: flex;
@@ -673,12 +680,6 @@ body {
   margin: 0;
   font-size: 0.8rem;
 }
-#main-container .welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-}
 #main-container .welcome .info-logo {
   display: flex;
   flex-direction: column;
@@ -694,6 +695,12 @@ body {
   font-family: Kanit;
   font-size: 3rem;
   font-weight: 700;
+}
+#main-container .guests button {
+  min-height: 6rem;
+}
+#main-container .guests button span {
+  font-size: 1.5rem;
 }
 
 #main-footer .container {
