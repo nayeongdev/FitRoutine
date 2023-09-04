@@ -570,6 +570,32 @@ body {
 #main-container .row-8-container.chat-form-container textarea {
   flex-grow: 1;
 }
+#main-container button {
+  padding: 1rem 1.5rem;
+  min-height: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main-container .primary-button {
+  color: #fff;
+  background-color: #006B5A;
+  border: none;
+}
+#main-container .primary-button svg {
+  fill: #fff;
+}
+#main-container .secondary-button {
+  color: #006B5A;
+  background-color: transparent;
+  border-color: #006B5A;
+}
+#main-container .secondary-button svg {
+  fill: #006B5A;
+}
 
 #main-footer .container {
   display: flex;
