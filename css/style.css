@@ -550,6 +550,9 @@ body {
   justify-content: center;
   gap: 0.5rem;
 }
+#main-container .col-8-container p {
+  margin: 0;
+}
 #main-container .col-8-container label {
   text-align: left;
 }
@@ -679,6 +682,11 @@ body {
 #main-container .warning p {
   margin: 0;
   font-size: 0.8rem;
+}
+#main-container .welcome .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 #main-container .welcome .info-logo {
   display: flex;
