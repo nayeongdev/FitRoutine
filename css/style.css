@@ -673,6 +673,28 @@ body {
   margin: 0;
   font-size: 0.8rem;
 }
+#main-container .welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+#main-container .welcome .info-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#main-container .welcome .info-logo .logo {
+  width: 6rem;
+  display: block;
+}
+#main-container .welcome .info-logo strong {
+  color: #006B5A;
+  font-family: Kanit;
+  font-size: 3rem;
+  font-weight: 700;
+}
 
 #main-footer .container {
   display: flex;
