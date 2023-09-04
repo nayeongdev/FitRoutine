@@ -183,22 +183,22 @@
           </div>
           <div class="col-8-container">
             <label for="user-age">나이</label>
-            <input type="number" id="user-age" min="3" max="120">
+            <input type="number" id="user-age" min="3" max="120" value="20" required>
           </div>
           <div class="row-container">
             <div class="col-8-container">
               <label for="user-height">키(cm)</label>
-              <input type="number" id="user-height" min="80" max="300">
+              <input type="number" id="user-height" min="80" max="300" step="10" value="150">
             </div>
             <div class="col-8-container">
               <label for="user-weight">몸무게(kg)</label>
-              <input type="number" id="user-weight" min="10" max="200">
+              <input type="number" id="user-weight" min="10" max="200" step="10" value="40" required>
             </div>
           </div>
         </form>
         <div class="row-container">
           <button class="secondary-button">이전으로</button>
-          <button class="primary-button">개인정보 등록하기</button>
+          <button class="primary-button" id="peronal-info-btn">개인정보 등록하기</button>
         </div>
       </section>
       <section class="container">
@@ -272,8 +272,8 @@
         </div>
         <form class="info-form col-container">
           <div class="col-8-container">
-            <label for="participants-num">참가자 수</label>
-            <input type="number" id="participants-num" min="1">
+            <label for="participants-num">참가자 수(명)</label>
+            <input type="number" id="participants-num" min="1" value="2" required>
           </div>
           <div class="col-8-container">
             <span>성별</span>
@@ -311,7 +311,7 @@
           </div>
           <div class="col-8-container">
             <label for="group-place">장소</label>
-            <input list="group-places" id="group-place" name="group-place">
+            <input list="group-places" id="group-place" name="group-place" value="체육관" required>
             <datalist id="group-places">
               <option value="체육관">체육관</option>
               <option value="공원">공원</option>
@@ -320,7 +320,7 @@
           </div>
           <div class="col-8-container">
             <label for="group-preferred-activity">선호 운동</label>
-            <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity">
+            <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity" value="유산소" required>
             <datalist id="group-preferred-activities">
               <option value="유산소 운동">유산소 운동</option>
               <option value="달리기">달리기</option>
