@@ -320,7 +320,8 @@
           </div>
           <div class="col-8-container">
             <label for="group-preferred-activity">선호 운동</label>
-            <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity" value="유산소" required>
+            <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity"
+              value="유산소" required>
             <datalist id="group-preferred-activities">
               <option value="유산소 운동">유산소 운동</option>
               <option value="달리기">달리기</option>
@@ -353,39 +354,39 @@
         <div class="answer"></div>
         <button class="primary-button">자세한 정보가 더 필요하신가요?</button>
       </section>
-      <article class="container">
+      <section class="container">
         <div class="col-8-container">
           <h2>채팅하기</h2>
           <p>chatGPT에게 궁금한 것을 물어보세요</p>
         </div>
-        <div class="warning">
-          <strong>주의사항</strong>
-          <p>ChatGPT 사용 시에는 신뢰할 수 있는 출처에서 정보를 확인하고, 개인 정보를 공유하지 않으며, 편향된 내용과 잠재적인 오류에 주의해야 합니다.</p>
-        </div>
-        <div class="chat-screen">
-          <div class="chat-wrap">
-            <!-- 다양한 컨텐츠가 삽입될 경우를 고려해 div로 감싸줌 -->
-            <div class="ai-chat">
-              <div class="chat-content">
-                <p>반갑습니다. 어떤것이 궁금하신가요?</p>
+        <div>
+          <div class="warning">
+            <strong>주의사항</strong>
+            <p>ChatGPT 사용 시에는 신뢰할 수 있는 출처에서 정보를 확인하고, 개인 정보를 공유하지 않으며, 편향된 내용과 잠재적인 오류에 주의해야 합니다.</p>
+          </div>
+          <article class="chat-container">
+            <div class="chat-screen">
+              <div class="ai-chat">
+                <div class="chat-content">
+                  <p>반갑습니다. 어떤것이 궁금하신가요?</p>
+                </div>
+              </div>
+              <div class="user-chat">
+                <div class="chat-content">
+                  <p>반갑습니다.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="user-chat">
-            <div class="chat-content">
-              <p>반갑습니다.</p>
-            </div>
-          </div>
+            <form class="chat-form">
+              <label for="chat-input" class="blind">질문 입력창</label>
+              <div class="chat-form-container row-8-container">
+                <textarea name="chat-input" id="chat-input" required></textarea>
+                <button type="submit" id="chat-submit-btn" class="primary-button">보내기</button>
+              </div>
+            </form>
+          </article>
         </div>
-        <form class="chat-form">
-          <label for="chat-input" class="blind">질문 입력창</label>
-          <div class="chat-form-container row-8-container">
-            <textarea name="chat-input" id="chat-input" required></textarea>
-            <button type="submit" id="chat-submit-btn" class="primary-button">보내기</button>
-          </div>
-        </form>
-        <div class="answer"></div>
-      </article>
+      </section>
     </main>
     <footer id="main-footer">
       <div class="container">
