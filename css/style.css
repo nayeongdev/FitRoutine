@@ -628,6 +628,37 @@ body {
 #main-container select {
   background: url("../resources/img/expand_more.svg") calc(100% - 5px) center no-repeat;
 }
+#main-container .choice-radio {
+  display: flex;
+  gap: 0.5rem;
+}
+#main-container .radio-btn {
+  flex: 1 0 0;
+  min-height: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid #6F7975;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-container .radio-btn label {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  line-height: 1.5;
+  cursor: pointer;
+}
+#main-container .radio-btn label:hover {
+  background-color: #cde8df;
+}
+#main-container .radio-btn input[type=radio] {
+  display: none;
+}
+#main-container .radio-btn input[type=radio]:checked + label {
+  background-color: #70A597;
+  color: #fff;
+}
 #main-container .warning {
   padding: 0.8rem 1rem;
   background-color: #FFDAD6;
