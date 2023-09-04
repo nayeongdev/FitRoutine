@@ -257,6 +257,7 @@ progress {
  */
 textarea {
   overflow: auto;
+  resize: none;
 }
 
 /**
@@ -394,6 +395,7 @@ body.non-scroll {
 
 body {
   background-color: #fafdfa;
+  color: #4B635C;
 }
 
 #main-header {
@@ -404,7 +406,7 @@ body {
 #main-header .container {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0 0.5rem;
   box-sizing: border-box;
 }
 #main-header .container .page-logo {
@@ -516,6 +518,57 @@ body {
 }
 #main-header .container .menu-close-btn.opened {
   display: block;
+}
+
+#main-container {
+  background-color: #fff;
+  text-align: center;
+  min-height: 90vh;
+}
+#main-container .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 482px;
+}
+#main-container .col-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+#main-container .col-8-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#main-container .col-8-container label {
+  text-align: left;
+}
+#main-container .row-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#main-container .row-container div {
+  flex-grow: 1;
+}
+#main-container .row-container .secondary-button {
+  flex-grow: 1;
+}
+#main-container .row-container .primary-button {
+  flex-grow: 2;
+}
+#main-container .row-8-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#main-container .row-8-container.chat-form-container {
+  align-items: stretch;
+}
+#main-container .row-8-container.chat-form-container textarea {
+  flex-grow: 1;
 }
 
 #main-footer .container {
