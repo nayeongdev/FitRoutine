@@ -596,6 +596,20 @@ body {
 #main-container .secondary-button svg {
   fill: #006B5A;
 }
+#main-container .warning {
+  padding: 0.8rem 1rem;
+  background-color: #FFDAD6;
+  color: #BA1A1A;
+  text-align: left;
+}
+#main-container .warning strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+#main-container .warning p {
+  margin: 0;
+  font-size: 0.8rem;
+}
 
 #main-footer .container {
   display: flex;
