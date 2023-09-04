@@ -41,8 +41,9 @@ function App() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res.choices[0].message.content);
-        $('.answer').innerHTML = `<p>${res.choices[0].message.content}</p>`;
+        let content = res.choices[0].message.content;
+        // console.log(content);
+        $('.answer').innerHTML = `<p>${content}</p>`;
       });
   }
 
@@ -54,13 +55,11 @@ function App() {
     const height = $('#user-height');
     const weight = $('#user-weight');
 
-    userData = {
-      goal: goal.value,
-      age: age.value + "살",
-      gender: gender.value,
-      height: height.value + "cm",
-      weight: weight.value + "kg",
-    }
+    userData.goal = goal.value;
+    userData.age = age.value + "살";
+    userData.gender = gender.value;
+    userData.height = height.value + "cm";
+    userData.weight = weight.value + "kg";
   });
 
   // form태그가 자동으로 전송되는걸 막아준다. (ENTER키를 눌렀을 때 새로고침 되는걸 막아준다.)
