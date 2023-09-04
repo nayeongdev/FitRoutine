@@ -524,6 +524,7 @@ body {
   background-color: #fff;
   text-align: center;
   min-height: 90vh;
+  /* IE */
 }
 #main-container .container {
   display: flex;
@@ -595,6 +596,37 @@ body {
 }
 #main-container .secondary-button svg {
   fill: #006B5A;
+}
+#main-container input:not([type=radio]),
+#main-container textarea,
+#main-container select {
+  display: flex;
+  min-height: 2.5rem;
+  padding: 5px 8px;
+  color: #4B635C;
+  border-radius: 4px;
+  border: 1px solid #6F7975;
+  box-sizing: border-box;
+  align-items: center;
+}
+#main-container input:not([type=radio]):focus, #main-container input:not([type=radio]):focus-visible,
+#main-container textarea:focus,
+#main-container textarea:focus-visible,
+#main-container select:focus,
+#main-container select:focus-visible {
+  outline-color: #006B5A;
+}
+#main-container select::-ms-expand {
+  display: none;
+}
+#main-container select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#main-container select {
+  background: url("../resources/img/expand_more.svg") calc(100% - 5px) center no-repeat;
 }
 #main-container .warning {
   padding: 0.8rem 1rem;
