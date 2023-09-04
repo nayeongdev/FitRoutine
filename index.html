@@ -187,18 +187,26 @@
           </div>
           <div class="row-container">
             <div class="col-8-container">
-              <label for="user-height">키</label>
+              <label for="user-height">키(cm)</label>
               <input type="number" id="user-height" min="80" max="300">
             </div>
             <div class="col-8-container">
-              <label for="user-weight">몸무게</label>
+              <label for="user-weight">몸무게(kg)</label>
               <input type="number" id="user-weight" min="10" max="200">
             </div>
           </div>
-          <div class="row-container">
-            <button class="secondary-button">이전으로</button>
-            <button class="primary-button">개인정보 등록하기</button>
-          </div>
+        </form>
+        <div class="row-container">
+          <button class="secondary-button">이전으로</button>
+          <button class="primary-button">개인정보 등록하기</button>
+        </div>
+      </section>
+      <section class="container">
+        <div class="col-8-container">
+          <h2>개인 정보</h2>
+          <p>개인 정보를 입력해주세요</p>
+        </div>
+        <form form class="info-form col-container">
           <div class="col-8-container">
             <label for="user-level">레벨</label>
             <select name="user-level" id="user-level">
@@ -249,7 +257,7 @@
                 <div class="help-msg">얼마나 운동하실건가요?</div>
               </div>
             </div>
-            <input type="number" id="user-exercise-time" min="0" step="10">
+            <input type="number" id="user-exercise-time" min="0" step="10" value="10">
           </div>
           <div class="row-container">
             <button class="secondary-button">이전으로</button>
@@ -328,14 +336,13 @@
                 <div class="help-msg">얼마나 운동하실건가요?</div>
               </div>
             </div>
-            <input type="number" id="group-exercise-time" min="0" step="10">
+            <input type="number" id="group-exercise-time" min="0" step="10" value="10">
           </div>
           <div class="row-container">
             <button class="secondary-button">이전으로</button>
             <button type="submit" id="group-info-submit-btn" class="primary-button">그룹 운동루틴 생성하기</button>
           </div>
         </form>
-        <div class="answer"></div>
       </section>
       <section class="container">
         <h2>핏루틴이 추천하는 운동 루틴이 생성되었습니다.</h2>

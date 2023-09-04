@@ -710,6 +710,9 @@ body {
 #main-container .guests button span {
   font-size: 1.5rem;
 }
+#main-container .info-form span {
+  text-align: left;
+}
 
 #main-footer .container {
   display: flex;
