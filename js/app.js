@@ -155,16 +155,41 @@ function App() {
     } else {
       alert("채팅 내용을 입력해 주세요")
     }
-    
+
     data.push({
       "role": "user",
-      "content": chatInput.value +". 결과는 200자 이하로 작성해"
+      "content": chatInput.value + ". 결과는 200자 이하로 작성해"
     });
-    
+
     chatInput.value = "";
     chatInput.focus();
 
-    OpenApi();
+    // OpenApi();
+    fetch(OPENAPI_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+      redirect: 'follow'
+    })
+      .then(res => res.json())
+      .then(res => {
+        let content = res.choices[0].message.content;
+        console.log(content);
+
+        const chatDiv = document.createElement('div');
+        const contnentDiv = document.createElement('div');
+        const p = document.createElement('p');
+
+        chatDiv.classList.add('ai-chat');
+        contnentDiv.classList.add('chat-content');
+        p.textContent = content;
+
+        contnentDiv.append(p);
+        chatDiv.append(contnentDiv);
+        chatScreen.appendChild(chatDiv);
+      });
   });
 
 }
