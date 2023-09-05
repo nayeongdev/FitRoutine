@@ -533,6 +533,7 @@ body {
   /* IE */
 }
 #main-container .container {
+  min-height: 90vh;
   max-width: 482px;
   display: flex;
   flex-direction: column;
@@ -721,9 +722,13 @@ body {
 }
 #main-container .chat-container {
   overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 #main-container .chat-container .chat-screen {
-  max-height: 20rem;
+  flex-grow: 1;
+  max-height: 30rem;
   overflow-y: auto;
   padding: 0.5rem;
 }
@@ -762,6 +767,9 @@ body {
 }
 #main-container .chat-container .chat-form {
   padding: 0.5rem;
+}
+#main-container .chat-container .chat-form button {
+  padding: 2% 4%;
 }
 #main-container .chat-container .chat-form button:hover {
   background-color: #70A597;

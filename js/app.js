@@ -17,6 +17,9 @@ $('.menu-close-btn').addEventListener('click', () => {
   document.body.classList.remove("non-scroll");
 });
 
+// 화면 이동
+
+
 function App() {
   const data = [];
   const userData = {};
