@@ -59,7 +59,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: inherit;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -581,6 +581,10 @@ body {
 }
 #main-container .row-8-container.chat-form-container textarea {
   flex-grow: 1;
+}
+#main-container pre {
+  white-space: pre-wrap;
+  text-align: left;
 }
 #main-container button {
   padding: 1rem 1.5rem;

@@ -43,7 +43,7 @@ function App() {
       .then(res => {
         let content = res.choices[0].message.content;
         // console.log(content);
-        $('.answer').innerHTML = `<p>${content}</p>`;
+        $('.answer').innerHTML = `<pre>${content}</pre>`;
       });
   }
 
@@ -181,11 +181,13 @@ function App() {
         const chatDiv = document.createElement('div');
         const contnentDiv = document.createElement('div');
         const p = document.createElement('p');
+        const pre = document.createElement('pre');
 
         chatDiv.classList.add('ai-chat');
         contnentDiv.classList.add('chat-content');
-        p.textContent = content;
+        pre.textContent = content;
 
+        p.append(pre);
         contnentDiv.append(p);
         chatDiv.append(contnentDiv);
         chatScreen.appendChild(chatDiv);
