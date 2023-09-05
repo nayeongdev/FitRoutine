@@ -24,7 +24,7 @@ function App() {
 
   data.push({
     "role": "system",
-    "content": "assistant는 운동 전문가다."
+    "content": "핏루틴은 운동 전문가다."
   });
 
   const OPENAPI_URL = 'https://estsoft-openai-api.jejucodingcamp.workers.dev/';
@@ -140,16 +140,29 @@ function App() {
 
   $('#chat-submit-btn').addEventListener('click', e => {
     e.preventDefault();
-    console.log("실행중");
 
-    let chatInput = $('#chat-input').value;
+    const chatScreen = $('.chat-screen');
+    const chatInput = $('#chat-input');
 
+    if (chatInput.value.trim().length > 0) {
+      chatScreen.innerHTML += `
+      <div class="user-chat">
+        <div class="chat-content">
+          ${chatInput.value}
+        </div>
+      </div>
+      `
+    } else {
+      alert("채팅 내용을 입력해 주세요")
+    }
+    
     data.push({
       "role": "user",
-      "content": chatInput
+      "content": chatInput.value +". 결과는 200자 이하로 작성해"
     });
-
-    chatInput = "";
+    
+    chatInput.value = "";
+    chatInput.focus();
 
     OpenApi();
   });
