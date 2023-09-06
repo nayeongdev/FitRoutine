@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fit Routine - 핏루틴</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
           <h2>MENU</h2>
           <ul class="gnb-list">
             <li>
-              <a href="./maker.html">
+              <a href="../maker/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                   <mask id="mask0_55_794" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
                     height="40">
@@ -51,12 +51,12 @@
                 <span>운동 루틴 생성하기</span>
               </a>
               <ul class="sub-list">
-                <li><a href="">개인맞춤 운동</a></li>
-                <li><a href="">그룹맞춤 운동</a></li>
+                <li><a href="../maker/user/">개인맞춤 운동</a></li>
+                <li><a href="../maker/group/">그룹맞춤 운동</a></li>
               </ul>
             </li>
             <li>
-              <a href="/chat.html">
+              <a href="../chat.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                   <mask id="mask0_55_797" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
                     height="40">
@@ -88,7 +88,7 @@
           <p>운동하는 사람은 몇 명인가요?</p>
         </div>
         <div class="col-container">
-          <button class="primary-button">
+          <button class="primary-button" id="user-btn">
             <div class="row-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
                 <path
@@ -98,7 +98,7 @@
               <span>개인</span>
             </div>
           </button>
-          <button class="primary-button">
+          <button class="primary-button " id="group-btn">
             <div class="row-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                 <mask id="mask0_22_522" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64"
@@ -115,211 +115,6 @@
             </div>
           </button>
         </div>
-      </section>
-      <section class="container" id="userCheck">
-        <div class="col-8-container">
-          <h2>개인 정보</h2>
-          <p>개인 정보를 입력해주세요</p>
-        </div>
-        <form class="info-form col-container">
-          <div class="col-8-container">
-            <label for="user-goal">목표</label>
-            <select name="user-goal" id="user-goal">
-              <option value="체중 감량">살을 빼고 싶어요</option>
-              <option value="근육 강화">근육을 강화하고 싶어요</option>
-              <option value="건강 개선">건강을 개선하고 싶어요</option>
-              <option value="스트레스 해소">스트레스 해소가 필요해요</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <span>성별</span>
-            <div class="choice-radio">
-              <div class="radio-btn">
-                <input type="radio" name="user-gender" id="male-user" value="남자">
-                <label for="male-user">남자</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="user-gender" id="female-user" value="여자">
-                <label for="female-user">여자</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="user-gender" id="none-user" value="" checked>
-                <label for="none-user">설정 안함</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-8-container">
-            <label for="user-age">나이</label>
-            <input type="number" id="user-age" min="3" max="120" value="20" required>
-          </div>
-          <div class="row-container">
-            <div class="col-8-container">
-              <label for="user-height">키(cm)</label>
-              <input type="number" id="user-height" min="80" max="300" step="10" value="150">
-            </div>
-            <div class="col-8-container">
-              <label for="user-weight">몸무게(kg)</label>
-              <input type="number" id="user-weight" min="10" max="200" step="10" value="40" required>
-            </div>
-          </div>
-        </form>
-        <div class="row-container">
-          <button class="secondary-button">이전으로</button>
-          <button class="primary-button" id="peronal-info-btn">개인정보 등록하기</button>
-        </div>
-      </section>
-      <section class="container" id="userCheckMore">
-        <div class="col-8-container">
-          <h2>개인 정보</h2>
-          <p>개인 정보를 입력해주세요</p>
-        </div>
-        <form form class="info-form col-container">
-          <div class="col-8-container">
-            <label for="user-level">레벨</label>
-            <select name="user-level" id="user-level">
-              <option value="초보">(초보) 운동을 별로 해본적이 없어요</option>
-              <option value="중급">(중급) 기본적인 운동 경험이 있어요</option>
-              <option value="고급">(고급) 전문적으로 운동한 경험이 있어요</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <label for="user-place">장소</label>
-            <select name="user-place" id="user-place">
-              <option value="집">집</option>
-              <option value="공원">공원</option>
-              <option value="">핼스장</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <span>선호 운동</span>
-            <div class="choice-radio">
-              <div class="radio-btn">
-                <input type="radio" name="user-preferred-activity" id="muscular" value="근력">
-                <label for="muscular">근력</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="user-preferred-activity" id="cardio" value="유산소">
-                <label for="cardio">유산소</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="user-preferred-activity" id="all" value="모든" checked>
-                <label for="all">모두</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-8-container">
-            <label for="focus-on-body-part">운동 부위</label>
-            <select name="focus-on-body-part" id="focus-on-body-part">
-              <option value="모두">모두</option>
-              <option value="상체">상체</option>
-              <option value="하체">하체</option>
-              <option value="코어">코어</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <div class="row-8-container">
-              <label for="user-exercise-time">운동 시간(분)</label>
-              <div class="help-box row-8-container">
-                <img class="img" src="resources/img/help.svg" alt="help logo">
-                <div class="help-msg">얼마나 운동하실건가요?</div>
-              </div>
-            </div>
-            <input type="number" id="user-exercise-time" min="0" step="10" value="10">
-          </div>
-          <div class="row-container">
-            <button class="secondary-button">이전으로</button>
-            <button type="submit" id="peronal-info-submit-btn" class="primary-button">개인 운동루틴 생성하기</button>
-          </div>
-        </form>
-      </section>
-      <section class="container" id="groupCheck">
-        <div class="col-8-container">
-          <h2>그룹 정보</h2>
-          <p>그룹 정보를 입력해주세요</p>
-        </div>
-        <form class="info-form col-container">
-          <div class="col-8-container">
-            <label for="participants-num">참가자 수(명)</label>
-            <input type="number" id="participants-num" min="1" value="2" required>
-          </div>
-          <div class="col-8-container">
-            <span>성별</span>
-            <div class="choice-radio">
-              <div class="radio-btn">
-                <input type="radio" name="group-gender" id="male-group" value="남자">
-                <label for="male-group">남자</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="group-gender" id="female-group" value="여자">
-                <label for="female-group">여자</label>
-              </div>
-              <div class="radio-btn">
-                <input type="radio" name="group-gender" id="mix-group" value="남녀 혼합" checked>
-                <label for="mix-group">혼성</label>
-              </div>
-            </div>
-          </div>
-          <div class="col-8-container">
-            <label for="group-goal">목표</label>
-            <select name="group-goal" id="group-goal">
-              <option value="체중 감량">살을 빼고 싶어요</option>
-              <option value="근육 강화">근육을 강화하고 싶어요</option>
-              <option value="건강 개선">건강을 개선하고 싶어요</option>
-              <option value="스트레스 해소">스트레스 해소가 필요해요</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <label for="group-level">레벨</label>
-            <select name="group-level" id="group-level">
-              <option value="초보">(초보) 운동을 별로 해본적이 없어요</option>
-              <option value="중급">(중급) 기본적인 운동 경험이 있어요</option>
-              <option value="고급">(고급) 전문적으로 운동한 경험이 있어요</option>
-            </select>
-          </div>
-          <div class="col-8-container">
-            <label for="group-place">장소</label>
-            <input list="group-places" id="group-place" name="group-place" value="체육관" required>
-            <datalist id="group-places">
-              <option value="체육관">체육관</option>
-              <option value="공원">공원</option>
-              <option value="산">산</option>
-            </datalist>
-          </div>
-          <div class="col-8-container">
-            <label for="group-preferred-activity">선호 운동</label>
-            <input list="group-preferred-activities" id="group-preferred-activity" name="group-preferred-activity"
-              value="유산소" required>
-            <datalist id="group-preferred-activities">
-              <option value="유산소 운동">유산소 운동</option>
-              <option value="달리기">달리기</option>
-              <option value="자전거">자전거</option>
-              <option value="댄스">댄스</option>
-            </datalist>
-          </div>
-          <div class="col-8-container">
-            <div class="row-8-container">
-              <label for="group-exercise-time">운동 시간(분)</label>
-              <div class="help-box row-8-container">
-                <img class="img" src="resources/img/help.svg" alt="help logo">
-                <div class="help-msg">얼마나 운동하실건가요?</div>
-              </div>
-            </div>
-            <input type="number" id="group-exercise-time" min="0" step="10" value="10">
-          </div>
-          <div class="row-container">
-            <button class="secondary-button">이전으로</button>
-            <button type="submit" id="group-info-submit-btn" class="primary-button">그룹 운동루틴 생성하기</button>
-          </div>
-        </form>
-      </section>
-      <section class="container" id="result">
-        <h2>핏루틴이 추천하는 운동 루틴이 생성되었습니다.</h2>
-        <div class="warning">
-          <strong>주의사항</strong>
-          <p>ChatGPT 사용 시에는 신뢰할 수 있는 출처에서 정보를 확인하고, 개인 정보를 공유하지 않으며, 편향된 내용과 잠재적인 오류에 주의해야 합니다.</p>
-        </div>
-        <div class="answer"></div>
-        <button class="primary-button" onclick="location.href='/chat.html'">자세한 정보가 더 필요하신가요?</button>
       </section>
     </main>
     <footer id="main-footer">
@@ -358,7 +153,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/maker.js"></script>
 </body>
+<script src="../js/maker/app.js"></script>
 
 </html>

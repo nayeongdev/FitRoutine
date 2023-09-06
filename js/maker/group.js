@@ -17,13 +17,19 @@ $('.menu-close-btn').addEventListener('click', () => {
   document.body.classList.remove("non-scroll");
 });
 
-// 화면 이동
-
-
+// 객체에있는 값들을 문자열로 바꿔주는 함수
+function strDataContent(datas) {
+  let dataContent = ''
+  for (let key in datas) {
+    if (datas.hasOwnProperty(key)) {
+      dataContent += `${key} : ${datas[key]}\n`;
+    }
+  }
+  return dataContent;
+}
 
 function App() {
   const data = [];
-  const userData = {};
   const groupData = {};
 
   data.push({
@@ -35,6 +41,8 @@ function App() {
 
   function OpenApi() {
     console.log("실행중");
+    $('#backdrop').style.display = "block";
+
     fetch(OPENAPI_URL, {
       method: 'POST',
       headers: {
@@ -46,62 +54,9 @@ function App() {
       .then(res => res.json())
       .then(res => {
         let content = res.choices[0].message.content;
-        console.log(content);
-        $('.answer').innerHTML = `<pre>${content}</pre>`;
+        location.href = "../result.html";
       });
   }
-
-  $('#peronal-info-btn').addEventListener('click', e => {
-    e.preventDefault();
-    const goal = $('#user-goal');
-    const age = $('#user-age');
-    const gender = $('input[name ="user-gender"]:checked');
-    const height = $('#user-height');
-    const weight = $('#user-weight');
-
-    userData.goal = goal.value;
-    userData.age = age.value + "살";
-    userData.gender = gender.value;
-    userData.height = height.value + "cm";
-    userData.weight = weight.value + "kg";
-  });
-
-  // form태그가 자동으로 전송되는걸 막아준다. (ENTER키를 눌렀을 때 새로고침 되는걸 막아준다.)
-  $('#peronal-info-submit-btn').addEventListener('click', e => {
-    e.preventDefault();
-
-    const level = $('#user-level');
-    const place = $('#user-place');
-    const preferredActivity = $('input[name ="user-preferred-activity"]:checked');
-    const focusOnPart = $('#focus-on-body-part');
-    const exerciseTime = $('#user-exercise-time');
-
-    userData.level = level.value;
-    userData.place = place.value;
-    userData.preferredActivity = preferredActivity.value;
-    userData.focusOnPart = focusOnPart.value;
-    userData.exerciseTime = exerciseTime.value + "분";
-
-    // console.log(userData);
-
-    let userDataContent = ''
-    for (let key in userData) {
-      if (userData.hasOwnProperty(key)) {
-        userDataContent += `${key} : ${userData[key]}\n`;
-      }
-    }
-    // console.log(userDataContent);
-
-    data.push({
-      "role": "user",
-      "content": `
-      아래 정보로 개인 맞춤형 운동 루틴을 계획해줘.
-      ${userDataContent}
-      `
-    });
-
-    OpenApi();
-  });
 
 
   $('#group-info-submit-btn').addEventListener('click', e => {
@@ -123,23 +78,23 @@ function App() {
     groupData.preferredActivity = preferredActivity.value;
     groupData.exerciseTime = exerciseTime.value + "분";
 
-    let groupDataContent = ''
-    for (let key in groupData) {
-      if (groupData.hasOwnProperty(key)) {
-        groupDataContent += `${key} : ${groupData[key]}\n`;
-      }
-    }
+
+    let groupDataContent = strDataContent(groupData);
     console.log(groupDataContent);
 
     data.push({
       "role": "user",
       "content": `
-      아래 정보로 개인 맞춤형 운동 루틴을 계획해줘.
+      아래 정보로 그룹 맞춤형 운동 루틴을 계획해줘.
       ${groupDataContent}
       `
     });
 
     OpenApi();
+  });
+
+  $('.prev-btn').addEventListener('click', () => {
+    history.back()
   });
 }
 
