@@ -16,3 +16,9 @@ $('.menu-close-btn').addEventListener('click', () => {
   $(".menu-close-btn").classList.remove("opened");
   document.body.classList.remove("non-scroll");
 });
+
+const makerBtn = $('#maker-btn');
+const chatBtn = $('#chat-btn');
+
+makerBtn.addEventListener('click', () => location.href = '/maker/')
+chatBtn.addEventListener('click', () => location.href = '/chat.html')
