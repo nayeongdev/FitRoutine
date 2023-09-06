@@ -17,17 +17,6 @@ $('.menu-close-btn').addEventListener('click', () => {
   document.body.classList.remove("non-scroll");
 });
 
-// 객체에있는 값들을 문자열로 바꿔주는 함수
-function strDataContent(datas) {
-  let dataContent = ''
-  for (let key in datas) {
-    if (datas.hasOwnProperty(key)) {
-      dataContent += `${key} : ${datas[key]}\n`;
-    }
-  }
-  return dataContent;
-}
-
 const userData = {};
 
 function App() {
@@ -44,6 +33,8 @@ function App() {
     userData.gender = gender.value;
     userData.height = height.value + "cm";
     userData.weight = weight.value + "kg";
+
+    localStorage.setItem("user", JSON.stringify(userData));
 
     location.href = './checkMore.html';
   });

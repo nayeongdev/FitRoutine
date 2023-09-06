@@ -30,7 +30,7 @@ function strDataContent(datas) {
 
 function App() {
   const data = [];
-  const userData = {};
+  const userMoreData = {};
 
   data.push({
     "role": "system",
@@ -42,7 +42,7 @@ function App() {
   function OpenApi() {
     console.log("실행중");
     $('#backdrop').style.display = "block";
-    
+
     fetch(OPENAPI_URL, {
       method: 'POST',
       headers: {
@@ -54,6 +54,9 @@ function App() {
       .then(res => res.json())
       .then(res => {
         let content = res.choices[0].message.content;
+
+        localStorage.setItem("result", JSON.stringify(content));
+
         location.href = "../result.html";
       });
   }
@@ -67,19 +70,21 @@ function App() {
     const focusOnPart = $('#focus-on-body-part');
     const exerciseTime = $('#user-exercise-time');
 
-    userData.level = level.value;
-    userData.place = place.value;
-    userData.preferredActivity = preferredActivity.value;
-    userData.focusOnPart = focusOnPart.value;
-    userData.exerciseTime = exerciseTime.value + "분";
+    userMoreData.level = level.value;
+    userMoreData.place = place.value;
+    userMoreData.preferredActivity = preferredActivity.value;
+    userMoreData.focusOnPart = focusOnPart.value;
+    userMoreData.exerciseTime = exerciseTime.value + "분";
 
-    let userDataContent = strDataContent(userData);
+    let userData = strDataContent(JSON.parse(localStorage.getItem("user")));
+    let userMoreDataContent = strDataContent(userMoreData);
+    console.log(userData + userMoreDataContent);
 
     data.push({
       "role": "user",
       "content": `
       아래 정보로 개인 맞춤형 운동 루틴을 계획해줘.
-      ${userDataContent}
+      ${userData + userMoreDataContent}
       `
     });
 

@@ -54,6 +54,9 @@ function App() {
       .then(res => res.json())
       .then(res => {
         let content = res.choices[0].message.content;
+
+        localStorage.setItem("result", JSON.stringify(content));
+
         location.href = "../result.html";
       });
   }
