@@ -20,3 +20,9 @@ $('.menu-close-btn').addEventListener('click', () => {
 let content = JSON.parse(localStorage.getItem("result"));
 
 $('.answer').innerHTML = `<pre>${content}</pre>`;
+
+const goChatBtn = $('#go-chat-btn');
+
+goChatBtn.addEventListener('click', () => {
+  location.href = '../chat.html';
+})
