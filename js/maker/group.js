@@ -34,7 +34,7 @@ function App() {
 
   data.push({
     "role": "system",
-    "content": "핏루틴은 운동 전문가다."
+    "content": "핏루틴은 그룹 맞춤형 운동 루틴을 계획 해주는 그룹 운동 전문가다."
   });
 
   const OPENAPI_URL = 'https://estsoft-openai-api.jejucodingcamp.workers.dev/';
@@ -88,7 +88,7 @@ function App() {
     data.push({
       "role": "user",
       "content": `
-      아래 정보로 그룹 맞춤형 운동 루틴을 계획해줘.
+      아래 정보로 그룹 맞춤형 운동 루틴을 계획해줘. 결과는 설명을 3줄로 요약하고나서 3개의 리스트로 작성해줘.
       ${groupDataContent}
       `
     });
