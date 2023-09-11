@@ -412,7 +412,7 @@ body {
 #main-header .container {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0 0.5rem;
+  padding: 0.625rem 0 0.5rem;
   box-sizing: border-box;
 }
 #main-header .container .page-logo {
@@ -439,8 +439,10 @@ body {
   background-color: transparent;
   border: none;
 }
-#main-header .container .menu-open-btn svg {
+#main-header .container .menu-open-btn svg,
+#main-header .container .menu-open-btn path {
   width: 100%;
+  height: 100%;
   fill: #006B5A;
 }
 #main-header .container .gnb {
@@ -518,8 +520,10 @@ body {
   width: 3rem;
   height: 3rem;
 }
-#main-header .container .menu-close-btn svg {
+#main-header .container .menu-close-btn svg,
+#main-header .container .menu-close-btn path {
   width: 100%;
+  height: 100%;
   fill: #006B5A;
 }
 #main-header .container .menu-close-btn.opened {
